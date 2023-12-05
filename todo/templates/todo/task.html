@@ -1,0 +1,17 @@
+{% extends 'todo/main.html' %}
+{% block content %}
+<div class="header-bar">
+    <a href="{% url 'tasks' %}">&#8592; Back</a>
+</div>
+
+<div class="card-body"> 
+<h2>{{task.title}}</h2>
+<p>{{task.description}}</p>
+
+<a class="button" href="{% url 'task-update' task.id %}">Edit</a>
+
+
+</div>
+
+
+{% endblock %}
