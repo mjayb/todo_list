@@ -4,14 +4,20 @@
 <div class="header-bar">
     <h1>TODO-LIST</h1>
 </div>
-
-<div class="card-body">
-    <form method="POST">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input class="button" type="submit" value="Login">
-    </form>
-    <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+<div class="task-items-wrapper"></div>
+<section class="task-wrapper">
+    <div class="row p-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Set Tasks</h1>
+        <p class="lead text-muted">This is a todo-list app built for the sole purpose of documenting tasks.</p>
+        <p>
+          <a href="{% url 'register' %}" class="button-fill">Create an account</a>
+          <a href="{% url 'login' %}" class="button">Login</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
 </div>
 
 
