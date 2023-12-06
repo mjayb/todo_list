@@ -19,6 +19,11 @@ class CustomLoginView(LoginView):
     def get_success_url(self):
         return reverse_lazy('tasks') 
 
+def index(request):
+    if request.user.is_authenticated:
+        return redirect('tasks')
+    return render(request,'todo/index.html')
+
 
 class RegisterPage(FormView):
     template_name = 'todo/register.html'
